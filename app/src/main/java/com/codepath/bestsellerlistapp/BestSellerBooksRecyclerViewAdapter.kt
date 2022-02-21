@@ -37,6 +37,7 @@ class BestSellerBooksRecyclerViewAdapter(
         holder.mBookTitle.text = books[position].title
         holder.mBookAuthor.text = books[position].author
         holder.mBookDescription.text = books[position].description
+        holder.mBookAmazonLink.text = "BUY ON AMAZON"
 //        holder.mBookBuyLink.setOnClickListener = books[position].amazonUrl;
         val bestSellerBook = books[position]
         Glide.with(holder.mView)
@@ -61,6 +62,7 @@ class BestSellerBooksRecyclerViewAdapter(
         val mBookRank: TextView = mView.findViewById<View>(id.ranking) as TextView
         val mBookDescription: TextView = mView.findViewById<View>(id.book_description) as TextView
         val mBookImage: ImageView = mView.findViewById<ImageView>(id.book_image) as ImageView
+        val mBookAmazonLink: Button = mView.findViewById(id.buy_button)
 //        val mBookBuyLink: Button = mView.findViewById<Button>(id.buy_button) as Button
         var mItem: BestSellerBook? = null
 
